@@ -78,9 +78,14 @@ Prepared for public release: 10/24/2003 - Derek J. Evans <derek@theteahouse.com.
     #endif
 #elif defined(ROT_0)
     #if !defined(G_DEFAULT)
-        #if defined(EP1) || defined(EP2)
-            #define YETI_DISPLAY_WIDTH 220
-            #define YETI_DISPLAY_HEIGHT 176
+        #if defined(EA1)
+            #if defined(FTR_E825)
+                #define YETI_DISPLAY_WIDTH 176
+                #define YETI_DISPLAY_HEIGHT 220
+            #else
+                #define YETI_DISPLAY_WIDTH 240
+                #define YETI_DISPLAY_HEIGHT 320
+                #endif
         #elif defined(EM1) || defined(EM2)
             #if defined(FTR_V3X)
                 #define YETI_DISPLAY_WIDTH 240
@@ -89,6 +94,9 @@ Prepared for public release: 10/24/2003 - Derek J. Evans <derek@theteahouse.com.
                 #define YETI_DISPLAY_WIDTH 176
                 #define YETI_DISPLAY_HEIGHT 220
             #endif
+        #elif defined(EP1) || defined(EP2)
+            #define YETI_DISPLAY_WIDTH 220
+            #define YETI_DISPLAY_HEIGHT 176
         #endif
     #else
         #if defined(EP1) || defined(EP2)
